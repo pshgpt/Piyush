@@ -8,6 +8,7 @@ import {
   TouchableHighlight,
   AsyncStorage,
   ActivityIndicator,
+  ScrollView,
   Text,
   View
 } from 'react-native';
@@ -88,7 +89,7 @@ class Register extends Component {
   render() {
     return (
       <View style={styles.container}>
-
+       <ScrollView style={styles.scroll}>
         <TextInput
           onChangeText={(text) => this.setState({ name: text })}
           style={styles.input}
@@ -143,7 +144,7 @@ class Register extends Component {
           secureTextEntry
           placeholderTextColor='#FCF5FF'
         />
-
+      </ScrollView>
 
         <TouchableHighlight onPress={this.onRegisterPressed.bind(this)} style={styles.button}>
           <Text style={styles.buttonText}>
@@ -166,6 +167,11 @@ const Errors = (props) => (
   );
 
 const styles = StyleSheet.create({
+  scroll: {
+    flex: 1,
+    alignSelf: 'stretch'    
+
+  },
   container: {
     flex: 1,
     justifyContent: 'flex-start',
@@ -175,8 +181,8 @@ const styles = StyleSheet.create({
     paddingTop: 80
   },
   input: {
-    height: 50,
     alignSelf: 'stretch',
+    height: 50,
     lineHeight: 23,
     marginTop: 10,
     padding: 4,

@@ -19,6 +19,7 @@ class LandDetails extends Component {
       Lsize: "",
       crop: "",
       value: "",
+      income:"",
       latitude: null,
      longitude: null,
      error: null,
@@ -71,6 +72,15 @@ handleOnPress(value) {
           placeholder="Type of crop grown"
           placeholderTextColor='#FCF5FF'
         />
+
+        <TextInput
+          onChangeText={(text) => this.setState({ income: text })}
+          style={styles.input}
+          placeholder="Total Income"
+            keyboardType="numeric"
+          placeholderTextColor='#FCF5FF'
+        />
+
 <Text style={styles.text}> Land Location </Text>
         <Text style={styles.textR}>Latitude: {this.state.latitude}</Text>
       <Text style={styles.textR}>Longitude: {this.state.longitude}</Text>
