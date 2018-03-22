@@ -96,6 +96,33 @@ class Register extends Component {
           placeholderTextColor='#FCF5FF'
         />
         <TextInput
+          onChangeText={(text) => this.setState({ age: text })}
+          style={styles.input}
+          placeholder="Age"
+          placeholderTextColor='#FCF5FF'
+          keyboardType="numeric"
+        />
+        <TextInput
+          onChangeText={(text) => this.setState({ add: text })}
+          style={styles.input}
+          placeholder="Address"
+          placeholderTextColor='#FCF5FF'
+        />
+        <TextInput
+          onChangeText={(text) => this.setState({ mob: text })}
+          style={styles.input}
+          placeholder="Mobile Number"
+          placeholderTextColor='#FCF5FF'
+          keyboardType="numeric"
+        />
+        <TextInput
+          onChangeText={(text) => this.setState({ aadhar: text })}
+          style={styles.input}
+          placeholder="Aadhar Number"
+          placeholderTextColor='#FCF5FF'
+          keyboardType="numeric"
+        />
+        <TextInput
           onChangeText={(text) => this.setState({ email: text })}
           style={styles.input}
           placeholder="Username"
@@ -106,16 +133,18 @@ class Register extends Component {
           onChangeText={(text) => this.setState({ password: text })}
           style={styles.input}
           placeholder="Password"
-          secureTextEntry={true}
+          secureTextEntry
           placeholderTextColor='#FCF5FF'
         />
         <TextInput
           onChangeText={(text) => this.setState({ password_confirmation: text })}
           style={styles.input}
           placeholder="Confirm Password"
-          secureTextEntry={true}
+          secureTextEntry
           placeholderTextColor='#FCF5FF'
         />
+
+
         <TouchableHighlight onPress={this.onRegisterPressed.bind(this)} style={styles.button}>
           <Text style={styles.buttonText}>
             Register

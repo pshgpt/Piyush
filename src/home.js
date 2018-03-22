@@ -6,7 +6,6 @@ import {
   TextInput,
   TouchableHighlight,
    Image,
-  ActivityIndicatorIOS,
   AsyncStorage,
   Alert,
   Text,
@@ -83,6 +82,10 @@ class Home extends Component {
     Actions.update();
   }
 
+  onLandPress() {
+    Actions.landview();
+  }
+
   render() {
     //We check to se if there is a flash message. It will be passed in user update.
     let flashMessage;
@@ -97,11 +100,6 @@ class Home extends Component {
     <Image source={require('../img/agrimaan.png')} />
         <Text style={styles.text}> Your new token is {this.state.accessToken} </Text>
 
-        <TouchableHighlight onPress={this.onLogout.bind(this)} style={styles.button}>
-          <Text style={styles.buttonText}>
-            Logout
-          </Text>
-        </TouchableHighlight>
         <TouchableHighlight
         onPress={this.onUpdatePress.bind(this)}
         style={styles.button}
@@ -109,7 +107,22 @@ class Home extends Component {
           <Text style={styles.buttonText}>
             Update Account
           </Text>
+
         </TouchableHighlight>
+        <TouchableHighlight
+        onPress={this.onLandPress.bind(this)}
+        style={styles.button}
+        >
+          <Text style={styles.buttonText}>
+            Land Details
+          </Text>
+        </TouchableHighlight>
+        <TouchableHighlight onPress={this.onLogout.bind(this)} style={styles.button}>
+          <Text style={styles.buttonText}>
+            Logout
+          </Text>
+        </TouchableHighlight>
+
         <TouchableHighlight onPress={this.confirmDelete.bind(this)} style={styles.button}>
           <Text style={styles.buttonText}>
             Delete Account

@@ -108,6 +108,33 @@ class Update extends Component {
           placeholderTextColor='#FCF5FF'
         />
         <TextInput
+          onChangeText={(text) => this.setState({ age: text })}
+          style={styles.input}
+           value={this.state.age}
+          placeholderTextColor='#FCF5FF'
+          keyboardType="numeric"
+        />
+        <TextInput
+          onChangeText={(text) => this.setState({ add: text })}
+          style={styles.input}
+           value={this.state.add}
+          placeholderTextColor='#FCF5FF'
+        />
+        <TextInput
+          onChangeText={(text) => this.setState({ mob: text })}
+          style={styles.input}
+           value={this.state.mob}
+          placeholderTextColor='#FCF5FF'
+          keyboardType="numeric"
+        />
+        <TextInput
+          onChangeText={(text) => this.setState({ aadhar: text })}
+          style={styles.input}
+         value={this.state.aadhar}
+          placeholderTextColor='#FCF5FF'
+          keyboardType="numeric"
+        />
+        <TextInput
           onChangeText={ (text)=> this.setState({email: text}) }
           style={styles.input} value={this.state.email}
           placeholderTextColor='#FCF5FF'
